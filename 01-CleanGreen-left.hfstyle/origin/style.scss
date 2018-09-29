@@ -1,0 +1,784 @@
+/*	
+	===============================================
+	Settings
+	===============================================
+*/
+ 
+@import 'settings';
+
+/*	
+	===============================================
+	Building Bricks
+	===============================================
+*/
+
+/* Import the common settings. */
+@import 'basic';
+@import 'headings';
+@import 'daterange';
+@import 'frontpage';
+@import 'conditions';
+@import 'personaldata';
+@import 'work';
+@import 'education';
+@import 'publication';
+@import 'overviews';
+
+/* Define the style-specific settings and structures. */
+
+%work-details {
+	@extend %work-details-common;
+}
+
+%work-details-info {
+	@extend %work-details-info-common;
+}
+
+%work-role {
+	@extend %work-role-common;
+
+    border-radius: 5px;
+    padding: 5px 10px 4px 10px;
+}
+
+%work-partner {
+	@extend %work-partner-common;
+}
+
+%work-partner-info {
+	@extend %work-partner-info-common;
+}
+
+%work-task-skill {
+	@extend %work-task-skill-common;
+	
+    margin-left: 0px;
+    font-size: .7rem;
+    font-weight: 300;
+    color: $defensiv-color;
+}
+
+%work-task-skill-separator {
+	@extend %work-task-skill-separator-common;
+	
+    font-size: .7rem;
+    font-weight: 300;
+}
+
+%daterange-main {
+	@extend %daterange-main-common;
+}
+
+%daterange-role {
+	@extend %daterange-role-common;
+}
+
+/*	
+	===============================================
+	Headlines
+	===============================================
+*/
+
+%h1-numbering {
+	@extend %h1-numbering-common;
+	
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	position: relative;
+	top: -2px;
+	text-align: center;
+	padding: 2px;
+}
+
+%h2-numbering {
+	@extend %h2-numbering-common;
+}
+
+%h3-numbering {
+	@extend %h3-numbering-common;
+}
+
+.h1wrapper {
+	@extend %h1wrapper-common;
+}
+
+.h2wrapper {
+	@extend %h2wrapper-common;
+}
+
+.h3wrapper {
+	@extend %h3wrapper-common;
+}
+
+.h4wrapper {
+	@extend %h4wrapper-common;
+}
+
+
+.h1content {
+	@extend %h1-heading-common;
+	@extend %h1content-common;
+}
+
+
+.h2content {
+	@extend %h2-heading-common;
+	@extend %h2content-common;
+}
+
+
+.h3content {
+	@extend %h3-heading-common;
+	@extend %h3content-common;
+}
+
+h1 {
+	@extend %h1-heading-common;
+}
+
+
+h2 {
+	@extend %h2-heading-common;
+}
+
+
+h3 {
+	@extend %h3-heading-common;
+}
+
+h4 {
+	@extend %h4-heading-common;
+}
+
+
+/*	
+	===============================================
+	Personal Data
+	===============================================
+*/
+
+div.personaldata {
+	
+	& .pair.table {
+		margin-left: 0px;
+	}
+	
+	& .table {
+		@extend %personal-data-table;
+
+		& .row {
+			@extend %personal-data-row-common;
+
+			& .column.left {
+				@extend %personal-data-labels-common;
+			}
+
+			& .column.right {
+				@extend %personal-data-values-common;
+			}
+
+		    & .column {
+			    &.right .pair.table {
+					padding-top: 0px;
+					padding-bottom: 0px;
+			    }
+			    
+			    &.right .pair.table .pair.row .pair.column.left, 
+			    &.left {
+				    @extend %personal-data-common;
+				}
+		
+				&.right .pair.table {
+					@extend %personal-data-eaddress-row-common;
+					
+			        .pair.row .pair.column {
+			        	&.left {
+				        	@extend %personal-data-eaddress-labels-common;
+			          	}
+			
+					  	&.right {
+						  	@extend %personal-data-eaddress-values-common;
+						}
+			        }
+				}
+		    }
+		}	  
+	}
+
+    .userimage {
+	    @extend %personal-data-userimage-common;
+	}
+}
+
+
+/*	
+	===============================================
+	Date Ranges
+	===============================================
+*/
+
+
+div {
+	
+	&.education .table .row .column.left .value.daterange, 
+	&.activity .table .row .column.left.activity .value.daterange, 
+	&.contract .table .row .column.left.contract .value.daterange, 
+	&.employment .table .row .column.left.employment .value.daterange, 
+	&.volunteer .table .row .column.left.volunteer .value.daterange, 
+	&.article .table .row .column.left .value.daterange, 
+	&.book .table .row .column.left .value.daterange, 
+	&.moderation .table .row .column.left .value.daterange, 
+	&.presentation .table .row .column.left .value.daterange, 
+	&.workshop .table .row .column.left .value.daterange {
+		@extend %daterange-main;
+		
+		padding-top: 0px;
+	}
+}
+
+
+div {
+	
+	&.activity .table .row .left.role.column .value.daterange, 
+	&.contract .table .row .left.role.column .value.daterange, 
+	&.employment .table .row .left.role.column .value.daterange, 
+	&.volunteer .table .row .left.role.column .value.daterange {
+		@extend %daterange-role;
+
+		padding-top: 2px;
+	}
+}
+
+
+/*	
+	===============================================
+	Task Skills
+	===============================================
+*/
+
+
+ul.taskskill {
+	@extend %taskskill-ul-common;
+    
+    li.taskskill {
+	    @extend %taskskill-li-common;
+    }
+}
+
+
+/*	
+	===============================================
+	Role
+	===============================================
+*/
+
+
+div {
+	
+	&.activity, 
+	&.contract, 
+	&.employment, 
+	&.volunteer {
+		
+		& .table {
+			@extend %work-general-table-common;
+			
+			& .row {
+				& .column {
+				}
+
+				& .left.role.column {
+					@extend %work-general-left-column-common;
+					
+					font-weight: 300;
+					font-size: .7rem;
+				}
+				
+				& .right.role.column {
+					@extend %work-general-right-column-common;
+					
+					font-weight: 500;
+					font-size: .9rem;
+					
+					& .role.title {
+						@extend %work-role;
+					}
+					
+					& div.taskskill.title {
+		
+						& :not(.list) {
+							@extend %work-details;
+
+						    padding-left: 20px;
+							padding-top: 5px;
+							
+							&:after {
+								content: ": ";
+								white-space: pre;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*	
+	===============================================
+	Education
+	===============================================
+*/
+
+
+div.education {
+	.table {
+		@extend %education-table-common;
+
+		.row {
+			@extend %education-row-common;
+			
+			.column {
+				&.right {
+					.program {
+						@extend %education-title-common;
+					}
+					
+					.company {
+						@extend %education-partner-common;
+					}
+					
+					.class, .duration {
+						@extend %education-info-common;
+					}
+					
+					.degree {
+						@extend %education-title-common;
+					}
+				}
+					
+				&.left {
+					@extend %education-column-left-common;
+				}
+					
+				&.right {
+					@extend %education-column-right-common;
+				}
+			}
+		}
+	}
+}
+
+
+/*	
+	===============================================
+	Publications
+	===============================================
+*/
+
+
+div {
+	
+	&.article,
+	&.book, 
+	&.moderation, 
+	&.presentation, 
+	&.workshop {
+		& .table {
+			@extend %publication-table-common;
+
+			& .row {
+				@extend %publication-row-common;
+
+				& .column.left {
+					@extend %publication-left-column-common;
+				}
+		
+				& .column.right {
+					@extend %publication-right-column-common;
+					
+					& .title {
+						@extend %publication-title-common;
+					}
+
+					& .host,
+					& .publisher {
+						@extend %publication-partner-common;
+					}
+
+					& .context,
+					& .isbn {
+						@extend %publication-info-common;
+					}
+					
+					& .role {
+						@extend %work-role;
+			
+						margin: 5px 0px 5px 0px;
+					    padding: 0px 5px 0px 5px;
+					}
+				}
+			}		
+		}
+	}
+}
+
+
+/*	
+	===============================================
+	Work Details
+	===============================================
+*/
+
+
+div {
+	
+	&.activity, 
+	&.contract, 
+	&.employment, 
+	&.volunteer {
+		
+		& .table {
+			width: 100%;
+			display: table;
+			clear: both;
+			border-collapse: separate;
+			border-spacing: 0px 5px;
+			padding-left: 20px;
+			padding-bottom: 0px;
+			line-height: 1.0;
+			
+			& .row {
+				@extend %work-general-row-common;
+
+				& .column {
+					&.left {
+						@extend %work-general-left-column-common;
+						
+					    padding-top: 21px;
+					}
+					
+					&.right {
+						@extend %work-general-right-column-common;
+
+					    font-weight: 500;
+					    font-size: .9rem;
+					    padding-top: 20px;
+					    
+					    & .department,
+					    & .industry {
+						    @extend %work-partner-info;
+					    }
+					    
+					    & .institution,
+					    & .customer,
+					    & .employer {
+						    @extend %work-partner;
+					    }
+					}
+				}
+				
+				& .right.role.column {
+					& div.task.list.title,
+					& div.result.list.title,
+					& div.sample.list.title {
+
+						@extend %work-details;	
+					}
+				}
+			}
+		}
+	}
+}
+
+					    
+
+/*	
+	===============================================
+	Work
+	===============================================
+*/
+
+
+div.value.activity.title,
+div.value.volunteer.title,
+div.value.contract.title,
+div.value.employment.title {
+	@extend %work-intro-common;
+}
+
+
+/*	
+	===============================================
+	Lists
+	===============================================
+*/
+
+
+ul {
+	&.task,
+	&.sample {
+		@extend %work-details-sub-common;
+	    
+	    li.task {
+		    @extend %work-details-task-list-entry-common;
+	    }
+	}
+	
+	&.result {
+		@extend %work-details-sub-common;
+	    padding-bottom: 0px;
+	
+		li.result {
+			@extend %work-details-result-list-entry-common;
+		}
+	}
+	
+	&.taskdescription {
+		@extend %work-details-task-description-common;
+	}
+
+	li {
+		&.task,
+		&.sample {
+		    list-style: square !important;
+		    margin-top: 0px;
+		    margin-left: 20px;
+		    padding-left: 0px;
+		    list-style-position: inside;
+		    
+		    .value {
+				margin-left: 0px;
+				padding-left: 0px;
+				padding-bottom: 0px;
+		    }
+		}
+		
+		&.taskdescription {
+			@extend %work-details-task-description-entry-common;
+		}
+	}
+}
+
+
+/*	
+	===============================================
+	...
+	===============================================
+*/
+
+
+div {
+  &.frontpage .table .row .column, 
+  &.personaldata .table .row .column, 
+  &.education .table .row .column, 
+  &.activity .table .row .column, 
+  &.contract .table .row .column, 
+  &.employment .table .row .column, 
+  &.volunteer .table .row .column, 
+  &.article .table .row .column, 
+  &.book .table .row .column, 
+  &.moderation .table .row .column, 
+  &.presentation .table .row .column, 
+  &.workshop .table .row .column {
+	  @extend %general-table-common;
+  }
+}
+
+li.list {
+  font-size: 0.9rem;
+}
+
+.block .overview {
+  h4 {
+    padding-left: 60px;
+    font-style: italic;
+    font-size: 1rem;
+    color: #999;
+  }
+
+  li div {
+    padding-left: 60px;
+    font-style: normal;
+    font-size: .8rem;
+  }
+}
+
+ol {
+  list-style: none;
+}
+
+
+/*	
+	===============================================
+	Conditions
+	===============================================
+*/
+
+
+div.proposal {
+	& .conditionlist {
+		& .conditions {
+			@extend %condition-list-common;
+			
+			& .condition {
+				@extend %condition-list-entry-common;
+			}
+		}
+	}
+}
+
+
+/*	
+	===============================================
+	Frontpage
+	===============================================
+*/
+
+body {
+	@extend %body-common;
+}
+
+div {
+	
+	&.frontpage {
+		@extend %frontpage-structure-common;
+
+	    .maintitle {
+			@extend %frontpage-title-common;
+	    }
+
+	    .subtitle {
+			@extend %frontpage-subtitle-common;
+	    }
+
+		.companylogo {
+			@extend %frontpage-logo-common;
+		}
+
+		.houseaddress.list {
+			padding-bottom: 20px;
+
+			&.houseaddress {
+				.street, 
+				.housenumber, 
+				.zipcode, 
+				.location, 
+				.country {
+					@extend %frontpage-address-entry-common;
+					color: $defensiv-color;
+				}
+			}
+		}
+		
+		.postaddress.list {
+			padding-bottom: 20px;
+
+			&.postaddress {
+				.postbox, 
+				.zipcode, 
+				.location, 
+				.country {
+					@extend %frontpage-address-entry-common;
+					color: #666;
+				}
+			}
+		}
+		
+		.table {
+			width: 100%;
+			display: table;
+			clear: both;
+			border-collapse: separate;
+			border-spacing: 0px;
+			
+			 .row {
+				 width: 100%;
+				 display: table-row;
+				 line-height: 1.35;
+				 
+				 .column {
+				    display: table-cell;
+				    vertical-align: top;
+				    padding-bottom: 1px;
+
+					&.left {
+						width: $embedded-column-left-width;
+						padding-right: 20px;
+						float: left;
+						white-space: nowrap;
+					}
+					&.right {
+						width: $embedded-column-right-width;
+						padding-left: 20px;
+						white-space: word-wrap;
+					}
+				}
+			}
+
+			&.electronicaddress {
+				@extend %eaddress-table-common;
+				
+				& .row {
+					@extend %eaddress-row-common;
+
+					&.electronicaddress {				
+						& .column {
+							&.left {
+								@extend %eaddress-label-common;
+							
+							    text-transform: uppercase;
+							    text-align: right;
+							    letter-spacing: 0.05em;
+							    font-weight: 500;
+							    font-size: .7rem;
+							    color: $base-color !important;
+							    padding-top: 0px;
+							    padding-left: 3px;
+							    padding-right: 20px;
+								padding-bottom: 0px;
+							}
+								 
+							&.right {
+								@extend %eaddress-value-common;
+								
+								color: $defensiv-color;
+								text-align: left;
+								font-weight: 300;
+								font-size: 1rem;
+								padding-bottom: 0px;
+								padding-top: 0px;
+							}
+						}	
+					}
+				} 
+			} 
+		}
+		
+	    .proposaltitle {
+			@extend %frontpage-proposal-title-common;
+	    }
+		
+		.headline {
+			@extend %frontpage-headline-common;
+		}
+	}
+}
+
+/*	
+	===============================================
+	Overviews
+	===============================================
+*/
+
+%overview-list-entry {
+	@extend %overview-list-entry-common;
+}
+
+
