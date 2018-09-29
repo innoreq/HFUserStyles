@@ -1,0 +1,66 @@
+/*
+	_education.scss
+	
+	This include defines basic structures for the "education" chapter.
+*/
+
+%education-table-common {
+	margin-left: $table-indent;
+	width: 100%;
+	display: table;
+	clear: both;
+	border-collapse: separate;
+	border-spacing: 0px 5px;
+	padding-left: 20px;
+}
+
+%education-row-common {
+	width: 100%;
+	display: table-row;
+	line-height: 1.35;
+}
+
+%education-column-left-common {
+	width: $column-left-width;
+	padding-right: 10px;
+	padding-top: 2px;
+}
+
+%education-column-right-common {
+	width: $column-right-width;
+	
+	.program, .class, .company, .duration, .degree {
+		padding-bottom: 0px;
+	}
+}
+
+/*
+	Education title
+*/
+
+%education-title-common {
+	color: $defensiv-color;
+	font-size: 0.9em;
+	font-weight: 700;
+}
+
+/*
+	Education partner
+*/
+
+%education-partner-common {
+	color: $defensiv-color;
+	font-size: 0.9em;
+	font-weight: 200;
+	font-style: italic;
+}
+
+/*
+	Education info 
+*/
+
+%education-info-common {
+	color: $defensiv-color;
+	font-size: 0.8em;
+	font-weight: 300;
+}

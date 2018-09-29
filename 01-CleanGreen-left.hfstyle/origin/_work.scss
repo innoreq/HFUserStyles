@@ -1,0 +1,240 @@
+/*
+	_work.scss
+	
+	This include defines the basic structure of work-related content.
+*/
+
+/*
+	The kind of work.
+	06.2006 - 05.2008.  [Werkstudent]
+*/
+
+%work-intro-common {
+	color: $work-intro-title-color;
+	font-size: $work-intro-title-font-size;
+	font-weight: $work-intro-title-font-weight;
+	padding-bottom: $work-intro-padding-bottom;
+}
+
+/*
+	...
+	[Tasks]
+	...
+		[Skills]
+		...
+	[Results]
+	...
+	[Samples]
+	...	
+*/
+
+%work-details-common {
+	color: $work-details-color;
+	font-weight: $work-details-font-weight;
+	font-size: $work-details-font-size;
+	font-style: $work-details-font-style;
+
+	padding-top: $work-details-padding-top;
+	padding-bottom: $work-details-padding-bottom;
+}
+
+/*
+	The role title.
+	11.2009 - 03.2010 [Konzepter]	
+*/
+
+%work-role-common {
+    font-size: $role-font-size;
+    font-weight: $role-font-weight;
+    color: $role-color;
+    background-color: $role-background-color;
+    border-style: $role-border-style;
+    border-color: $role-border-color;
+    border-width: $role-border-width;
+    display: inline-block;
+    font-style: normal;
+}
+
+/*
+	The skills list for a task.	
+	[HTMLS5, JavaScript, MySQL]
+*/
+
+%work-task-skill-common {
+    display: inline-flex;
+}
+
+%work-task-skill-separator-common {
+    content: ", ";
+    white-space: pre;
+}
+
+/*
+	Work partner.
+
+	Werkstudent
+	[AlphASys GmbH; Fürth]
+	...
+*/
+
+%work-partner-common {
+    font-size: .9rem;
+    font-weight: 300;
+    color: $defensiv-color;
+    font-style: italic;
+}
+
+/*
+	Work partner info (e.g., industry).
+	
+	Edeku GmbH, Forchheim
+	[Food & Beverage]
+	...
+*/
+
+%work-partner-info-common {
+    color: $defensiv-color;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+/*
+	Work details info.
+*/
+
+%work-details-info-common {
+    color: #666;
+    font-weight: 300;
+    font-size: .8rem;
+	padding-bottom: 0px;
+}
+
+/*
+	Task skills frame
+*/
+
+%taskskill-ul-common {
+    margin-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+/*
+	Tasks skills entries
+*/
+
+%taskskill-li-common {
+    display: inline-flex;
+    margin-left: 0px;
+    
+    .value {
+	    @extend %work-task-skill;
+    }
+    
+    &:after {
+	    @extend %work-task-skill-separator;
+    }
+    
+    &:last-child:after {
+		content: "";
+    }
+}
+
+/*
+	Work details sub structure
+*/
+
+%work-details-sub-common {
+    padding-left: 0px;
+    margin-left: 0px;
+    display: inline-block;
+    font-size: .8rem;
+}
+
+/*
+	Task list entry
+*/
+
+%work-details-task-list-entry-common {
+    &.value {
+	    padding-bottom: initial;
+	    padding-top: initial;
+    }
+}
+
+/*
+	Result list entry
+*/
+
+%work-details-result-list-entry-common {
+    list-style: square !important;
+    margin-top: 0px;
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    list-style-position: inside;
+
+	&.value.result.title {
+	    margin-left: 0px;
+	    padding-left: 0px;
+	    padding-bottom: 0px;
+	    color: #666;
+	    font-weight: 300;
+	    font-size: .8rem;
+	}
+}
+
+/*
+	Task description 
+*/
+
+%work-details-task-description-common {
+    padding-bottom: 6px;
+    padding-top: 3px;
+	padding-left: 20px;
+    font-size: .8rem;
+}
+
+/*
+	Task description entry
+*/
+
+%work-details-task-description-entry-common {
+    list-style-position: inside;
+    list-style: circle !important;
+    font-weight: 300;
+    font-size: .7rem;
+    
+    & .value {
+    }
+}
+
+%work-general-table-common {
+	margin-left: $table-indent;
+}
+
+%work-general-left-column-common {
+    width: $column-left-width;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-top: 15px;
+
+	&.role.title {		
+		padding-bottom: 5px;
+	}
+}
+
+%work-general-right-column-common {
+    width: $column-right-width;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+
+%work-general-row-common {
+    width: 100%;
+    display: table-row;
+    line-height: 1.35;
+    padding-bottom: 0px;
+    padding-top: 0px !important;
+}

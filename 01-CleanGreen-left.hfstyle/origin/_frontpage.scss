@@ -1,0 +1,111 @@
+/*
+	_frontpage.scss
+	
+	This include defines the basic structure of the frontpage.
+*/
+
+/*
+	Frontpage title.
+	[Mustermann IT]
+	...
+*/
+
+%frontpage-title-common {
+	color: $frontpage-title-color;
+	font-weight: $frontpage-title-font-weight;
+	font-size: $frontpage-title-font-size;
+	padding-top: $frontpage-title-padding-top;
+	padding-bottom: $frontpage-title-padding-bottom;
+	font-family: $font-family;
+}
+
+/*
+	Frontpage subtitle.	
+	...
+	[Web+Apps]
+	...
+*/
+
+%frontpage-subtitle-common {
+	color: $frontpage-subtitle-color;
+	font-weight: $frontpage-subtitle-font-weight;
+	font-size: $frontpage-subtitle-font-size;
+	padding-bottom: $frontpage-subtitle-padding-bottom;
+	font-family: $font-family;
+}
+
+/*
+	Frontpage proposal title.
+	...
+	[Proposal]
+	[Web-Designer]
+	...
+*/
+
+%frontpage-proposal-title-common {
+	color: $frontpage-title-color;
+	font-weight: $frontpage-title-font-weight;
+	font-size: $frontpage-title-font-size;
+	font-style: italic;
+	font-family: $font-family;
+		    
+    &.label {
+	    padding-top: 50px;
+	    padding-bottom: 10px;
+    }
+    &.value {
+	    padding-top: 0px;
+	    padding-bottom: 10px;
+    }
+}
+
+/*
+	Frontpage logo.
+*/
+
+%frontpage-logo-common {
+	padding-top: $frontpage-logo-padding-top;
+	padding-left: $frontpage-logo-padding-left;
+	max-width: $frontpage-logo-max-width;
+	max-height: $frontpage-logo-max-height;
+	vertical-align: top;
+	float: left;
+}
+
+/*
+	Frontpage address entry.
+	...
+	House Addresses
+	[Paulinenstrasse 14]
+	[90200 Nürnberg]
+*/
+
+%frontpage-address-entry-common {
+	text-align: left;
+	font-weight: 300;
+	font-size: 1rem;
+	font-family: $font-family;
+	white-space: pre;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+/*
+	Frontpage separating headline.	
+	...
+	[House Addresses]
+	...
+*/
+
+%frontpage-headline-common {
+	color: $headline-color;
+	font-weight: $headline-font-weight;
+	font-size: $headline-font-size;
+	font-family: $font-family;
+	padding-bottom: $frontpage-headline-padding-bottom;
+	padding-top: $frontpage-headline-padding-top;
+}
+
+%frontpage-structure-common {
+    page-break-after: always !important;
+}

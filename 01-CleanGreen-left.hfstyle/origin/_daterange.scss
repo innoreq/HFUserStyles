@@ -1,0 +1,34 @@
+/*
+	_daterange.scss
+	
+	This include defines the daterange-related structures.
+*/
+
+/*
+	Main dete range.
+*/
+
+%daterange-main-common {
+	font-weight: $daterange-main-font-weight;
+	font-size: $daterange-main-font-size;
+	color: $label-color;
+
+	text-align: $label-text-align;
+	text-transform: $label-text-transform;
+	letter-spacing: $label-letter-spacing;
+}
+
+/*
+	Role date range.
+	[05.2009 - 08.2009]   ...
+*/
+
+%daterange-role-common {
+	font-weight: $daterange-role-font-weight;
+	font-size: $daterange-role-font-size;
+
+	text-align: $label-text-align;
+	text-transform: $label-text-transform;
+	letter-spacing: $label-letter-spacing;
+	color: $label-color;
+}

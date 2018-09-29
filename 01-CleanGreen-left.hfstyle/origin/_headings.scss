@@ -1,0 +1,161 @@
+/*
+	_headings.scss
+	
+	This include defines the basic heading structures.
+*/
+
+/*
+	Level-1-Headings
+*/
+
+%h1-heading-common {
+	font-weight: $h1-title-font-weight;
+	text-transform: uppercase;
+	position: relative;
+	font-size: $h1-title-font-size;
+	color: $h1-title-color;
+}
+
+/*
+	Level-2-Headings
+*/
+
+%h2-heading-common {
+	font-weight: $h2-title-font-weight;
+	text-transform: uppercase;
+	font-size: $h2-title-font-size;
+	color: $h2-title-color;
+}
+
+/*
+	Level-3-Headings
+*/
+
+%h3-heading-common {
+	font-weight: $h3-title-font-weight;
+	text-transform: uppercase;
+	font-size: $h3-title-font-size;
+	color: $h3-title-color;
+}
+
+/*
+	Level-4-Headings
+*/
+
+%h4-heading-common {
+	font-weight: $h4-title-font-weight;
+	text-transform: uppercase;
+	font-size: $h4-title-font-size;
+	color: $h4-title-color;
+}
+
+/*
+	Level-1-Heading Numbers
+*/
+
+%h1-numbering-common {
+	font-size: $h1-number-font-size;
+	font-weight: $h1-number-font-weight;
+	background-color: $h1-number-background-color;
+	color: $h1-number-color;
+}
+
+/*
+	Level-2-Heading Numbers
+*/
+
+%h2-numbering-common {
+	color: $h2-number-color;
+	font-size: $h2-number-font-size;
+	font-weight: $h2-number-font-weight;
+	background-color: $h2-number-background-color;
+	padding: 10px;
+}
+
+/*
+	Level-3-Heading Numbers
+*/
+
+%h3-numbering-common {
+	color: $h3-number-color;
+	font-size: $h3-number-font-size;
+	font-weight: $h3-number-font-weight;
+	background-color: $h3-number-background-color;		
+	padding: 10px;
+}
+
+/*
+	Level-1-Wrapper 
+*/
+
+%h1wrapper-common {
+	page-break-before: always !important;
+	page-break-after: avoid !important;
+	padding-top: 50px;
+	padding-bottom: 10px;
+
+	/* Numbering */
+	counter-reset: h2counter 0;
+}
+
+/*
+	Level-2-Wrapper
+*/
+
+%h2wrapper-common {
+  	padding-top: 50px;
+  	padding-bottom: 10px;
+	page-break-after: avoid !important;
+
+  	/* Numbering */
+	counter-reset: h3counter;
+}
+
+/*
+	Level-3-Wrapper
+*/
+
+%h3wrapper-common {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	page-break-after: avoid !important;
+}
+
+/*
+	Level-4-Wrapper
+*/
+
+%h4wrapper-common {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	page-break-after: avoid !important;
+}
+
+%h1content-common {
+	&:before {
+		@extend %h1-numbering;
+		
+		counter-increment: h1counter;
+		content: counter(h1counter) "  ";
+	}
+}
+
+
+%h2content-common {
+	&:before {
+		@extend %h2-numbering;
+		
+		counter-increment: h2counter;
+		content: counter(h1counter) "." counter(h2counter) "  ";
+	}
+}
+
+
+%h3content-common {
+	&:before {
+		@extend %h3-numbering;
+		
+		counter-increment: h3counter;
+		content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "  ";
+	}
+}

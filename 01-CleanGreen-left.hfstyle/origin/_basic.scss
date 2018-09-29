@@ -1,0 +1,87 @@
+/*
+	_basic.scss
+	
+	This include defines the basic setup of pages and content.
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote {
+  &:before, &:after {
+    content: "";
+  }
+}
+
+q {
+  &:before, &:after {
+    content: "";
+  }
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+@media screen, print {
+  body {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+@page {
+  display: block;
+  size: $page-size $page-orientation !important;
+  margin: 2cm 2cm 2cm 2.5cm !important;
+}
+
+@page :blank {
+  @top-centercontent : "This page is intentionally left blank.";
+}
+
+%body-common {
+	font-family: $font-family;
+	background-image: $frontpage-background-image;
+	min-width: $page-width !important;
+	max-width: $page-width !important;
+	color: $defensiv-color;
+
+	-webkit-print-color-adjust: exact;
+	font-size: 16px;
+	line-height: 1.25;
+	background-position: left;
+	background-position-x: left;
+	background-position-y: top;
+	background-repeat: no-repeat;
+	counter-reset: h1counter h2counter h3counter;
+}
+
+%general-table-common {
+    display: table-cell;
+    vertical-align: top;
+    padding-bottom: 1px;
+}

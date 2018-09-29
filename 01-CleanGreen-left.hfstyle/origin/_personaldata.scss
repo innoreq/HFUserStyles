@@ -1,0 +1,131 @@
+/*
+	_personaldata.scss
+	
+	This include defines some of the structures for the "personal data" chapter.
+*/
+
+/*
+	[Name]    Paul Mustermann
+	[Born]    04/07/1984 in Bamberg
+	...
+	[Electronic Addresses]   [E-Mail]   paul@mustermann-it.de
+	...
+*/
+
+%personal-data-table {
+	margin-left: $table-indent;
+	width: 100%;
+	display: table;
+	clear: both;
+	border-collapse: separate;
+	border-spacing: 0px 5px;
+	padding-left: 20px;
+}
+
+%personal-data-common {
+    text-transform: $label-text-transform;
+    text-align: $label-text-align;
+    letter-spacing: $label-letter-spacing;
+    font-weight: $label-font-weight;
+    font-size: $label-font-size;
+    color: $label-color;
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+%personal-data-row-common {
+	padding-top: 0px;
+	padding-bottom: 0px;
+    width: 100%;
+    display: table-row;
+    line-height: 1.35;
+}
+
+%personal-data-labels-common {
+	padding-top: 3px;
+	padding-bottom: 0px;
+    width: 30%;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+%personal-data-values-common {				
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 65%;
+	font-weight: 500;
+	font-size: .9rem;
+}
+
+%personal-data-eaddress-row-common {
+    width: 95%;
+    padding-left: 0px;
+    border-collapse: separate;
+    border-spacing: 0px 3px;
+}
+
+%personal-data-eaddress-labels-common {
+    width: 20%;
+    text-align: left;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+%personal-data-eaddress-values-common {
+	width: 75%;
+	font-weight: 500;
+	font-size: .9rem;
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+%personal-data-userimage-common {
+	padding-left: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	float: left;
+	position: absolute;
+	right: 0;
+	
+	img {
+		max-width: 200px;
+		max-height: 150px;
+	}
+}
+
+/*
+	Label for electronic addresses.
+	[Electronic Addresses]   [E-Mail] ...
+	                         [Web]    ...	
+*/
+
+%eaddress-label-common {
+    white-space: nowrap;
+    float: left;
+	width: $column-left-width;
+}
+
+/*
+	Value for electronic addresses.
+*/
+
+%eaddress-value-common {
+	white-space: word-wrap;
+    width: $column-right-width;
+}
+
+%eaddress-table-common {
+    width: 100%;
+    padding-left: 0px;
+    border-collapse: separate;
+    border-spacing: 0px 3px;
+}
+
+%eaddress-row-common {
+    width: 100%;
+    display: table-row;
+    line-height: 1.35;
+}
+
+

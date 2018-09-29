@@ -1,0 +1,124 @@
+/*
+	_settings.scss
+	
+	This include defines the style-specific settings.
+*/
+
+/* Basic Stuff */
+$page-size: A4;
+$page-orientation: portrait;
+$page-width: 784px;
+$font-family: "HelveticaNeue-Light";
+$base-color: #7ab522;
+$contrast-color: #333333;
+$defensiv-color: #666666;
+$light-color: #999999;
+
+/* Frontpage */
+$frontpage-background-image: url(images/body-background.png);
+
+$frontpage-title-color: $contrast-color;
+$frontpage-title-font-weight: 900;
+$frontpage-title-font-size: 1.8rem;
+$frontpage-title-padding-top: 50px;
+$frontpage-title-padding-bottom: 10px;
+
+$frontpage-subtitle-color: $contrast-color;
+$frontpage-subtitle-font-weight: 700;
+$frontpage-subtitle-font-size: 1.6rem;
+$frontpage-subtitle-padding-bottom: 20px;
+
+$frontpage-logo-padding-top: 50px;
+$frontpage-logo-max-width: 200px;
+$frontpage-logo-max-height: 150px;
+$frontpage-logo-padding-left: 20px;
+
+$frontpage-headline-padding-bottom: 5px;
+$frontpage-headline-padding-top: 10px;
+
+/* Heading Numbers */
+$h1-number-color: #ffffff;
+$h1-number-font-size: 1.25rem;
+$h1-number-font-weight: 700;
+$h1-number-background-color: $base-color;
+$h2-number-color: $base-color;
+$h2-number-font-size: 1.25rem;
+$h2-number-font-weight: 700;
+$h2-number-background-color: clear;
+$h3-number-color: $base-color;
+$h3-number-font-size: 1.25rem;
+$h3-number-font-weight: 700;
+$h3-number-background-color: clear;
+
+/* Headings */
+$h1-title-font-size: 1.7rem;
+$h2-title-font-size: 1.4rem;
+$h3-title-font-size: 1.2rem;
+$h4-title-font-size: 1.1rem;
+$h1-title-color: $base-color;
+$h2-title-color: $base-color;
+$h3-title-color: $defensiv-color;
+$h4-title-color: #000000;
+$h1-title-font-weight: 800;
+$h2-title-font-weight: 600;
+$h3-title-font-weight: 400;
+$h4-title-font-weight: 200;
+
+/* Sub-Headlines */
+$headline-color: $base-color;
+$headline-font-size: 0.8rem;
+$headline-font-weight: 700;
+
+/* Labels */
+$label-text-align: left;
+$label-letter-spacing: 0.05em;
+$label-font-weight: 600;
+$label-font-size: 0.7rem;
+$label-color: $base-color;
+$label-text-transform: uppercase;
+
+/* Date Ranges */
+$daterange-main-font-weight: 700;
+$daterange-main-font-size: 0.8rem;
+$daterange-role-font-weight: 400;
+$daterange-role-font-size: 0.7rem;
+
+/* Roles */
+$role-border-style: solid;
+$role-border-width: 0.5px;
+$role-border-color: $base-color;
+$role-background-color: clear;
+$role-color: $defensiv-color;
+$role-font-size: 0.8rem;
+$role-font-weight: 700;
+
+/* Work Intro */
+$work-intro-title-font-size: 0.9rem;
+$work-intro-title-font-weight: 700;
+$work-intro-title-color: $defensiv-color;
+$work-intro-padding-bottom: 2px;
+
+/* Work Details */ 
+$work-details-color: $light-color;
+$work-details-font-weight: 700;
+$work-details-font-size: 0.8rem;
+$work-details-font-style: italic;
+$work-details-padding-top: 10px;
+$work-details-padding-bottom: 5px;
+
+/* Column Widths */
+$column-left-width: 30%;
+$column-right-width: 100% - $column-left-width - 5%;
+
+$embedded-column-left-width: 20%;
+$embedded-column-right-width: 100% - $column-left-width - 5%;
+
+/* Indents */
+$table-indent: 50px;
+
+/* Overviews */
+$overview-list-entry-color: $defensiv-color;
+$overview-list-entry-font-weight: 400;
+$overview-list-entry-font-size: 0.8rem;
+$overview-list-entry-font-family: $font-family;
+$overview-list-entry-font-style: normal;

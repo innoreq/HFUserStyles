@@ -1,0 +1,22 @@
+/*
+	_conditions.scss
+	
+	This include defines basic structures for the "conditions" chapter.
+*/
+
+%condition-list-common {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: .7rem;
+    color: $base-color !important;
+}
+
+%condition-list-entry-common {
+	padding-left: 60px;
+	padding-bottom: 5px;
+	font-weight: 300;
+	font-size: 1rem;
+	color: #666 !important;
+	word-break: break-word;
+	word-wrap: break-word;
+}

@@ -1,0 +1,89 @@
+/*
+	_publication.scss
+	
+	This include defines the basic structure of the publications.
+*/
+
+/*
+	Publication title
+	
+	04.2017		[User Experience bei Logistikapplikationen]
+	...
+*/
+
+%publication-title-common {
+	color: $defensiv-color;
+	font-size: 0.9em;
+	font-weight: 700;
+}
+
+/*
+	Publication partner
+	
+	...
+	[Logistikfachverlag AG]
+	...
+*/
+
+%publication-partner-common {
+	color: $defensiv-color;
+	font-size: 0.9em;
+	font-weight: 200;
+	font-style: italic;
+}
+
+/*
+	Publication info 
+	
+	...
+	[ISBN 911-47114712]
+	...
+*/
+
+%publication-info-common {
+	color: $defensiv-color;
+	font-size: 0.8em;
+	font-weight: 300;
+}
+
+/*
+	Publication table structure
+*/
+
+%publication-table-common {
+	margin-left: $table-indent;
+	width: 100%;
+	display: table;
+	clear: both;
+	border-collapse: separate;
+	border-spacing: 0px 5px;
+	padding-left: 20px;
+}
+
+/*
+	Publication row structure
+*/
+
+%publication-row-common {
+    width: 100%;
+    display: table-row;
+    line-height: 1.35;
+}
+
+/*
+	Publication left column structure
+*/
+
+%publication-left-column-common {
+    width: 30%;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+/*
+	Publication right column structure
+*/
+
+%publication-right-column-common {
+    width: 65%;
+}

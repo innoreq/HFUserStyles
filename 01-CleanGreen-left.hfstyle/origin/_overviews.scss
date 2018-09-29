@@ -1,0 +1,54 @@
+/*
+	_overviews.scss
+	
+	This include defines the basic structures of the overviews chapter.
+	
+	Ths "skills" section may have multiple sub-sections for each skill class, and for "other skills".
+	The "industries" section has no sub-sections.
+	
+	The entries are displayed in a three-column-layout for both, skills and industries.
+*/
+
+%overview-list-entry-common {
+	color: $overview-list-entry-color;	
+	font-weight: $overview-list-entry-font-weight;
+	font-size: $overview-list-entry-font-size;
+	font-family: $overview-list-entry-font-family;
+	font-style: $overview-list-entry-font-style;
+	padding-left: 60px;
+}
+
+div {
+
+	&.h2wrapper {
+		clear: both; /* We need this to have level-2-headlines appear on a new line. */
+	}
+	
+	&.skill.overview,
+	&.industry.overview {
+		clear: both; /* We need this to have level-3-headlines appear on a new line. */
+		width: 100%; 
+	}	
+
+	&.skill.overview.class.entries,
+	&.industry.overview.class.entries {
+
+		& .h3wrapper {
+			padding-left: 30px; /* We want to indent the level-3-headlines in the overviews. */
+		} 
+		& ul.skill.list,
+		& ul.industry.list {
+			color: red;
+			padding-left: 40px;
+						
+			& li.skill.list.entry,
+			& li.industry.list.entry {
+				@extend %overview-list-entry;
+				
+				width: 25%; /* We want three columns for the overviews */
+				float: left;
+			}
+		}
+	}
+} 
+
