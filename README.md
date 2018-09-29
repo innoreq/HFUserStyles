@@ -72,7 +72,208 @@ We are using SASS to process the **style.scss** file and to create the  **style.
 
 For performance reasons, you should use the most compact variant of the generated CSS.
 
-# 
+# The Inner Structure of the HTML
 
+How is the HTML defined? We tried to create it in a way that leaves you all options to adopt its presentation for your needs.
 
+Therefore, we’re using **div** elements with appropriate **class** assignments throughout the HTML.
+
+The basic idea behind that - and this is how all the provided styles are implemented - is to have two table structures:
+
+* An outer table, that is used for the main structure (e.g., labels and values for the *Personal Data* section, or date range and descriptions for the *Work* sections).
+
+* An inner table, that is used for sub-structures (e.g., electronic addresses within the *Personal Data* section, or work details within the *Work* section.
+
+Let’s have a look on the frontpage in the **sample.html**:
+
+	<div class="frontpage">
+		<div class="table">
+	    	<div class="row">
+	        	<div class="column left"><img class="companylogo" src="images/CompanyPlaceholder.png"></div>
+	
+	            	<div class="column right">
+	               		<div class="maintitle">
+	                        Mustermann IT
+	                    </div>
+	
+	                    <div class="subtitle">
+	                        Web+Apps
+	                    </div>
+	
+	                    <div class="houseaddress list">
+	                        <div class="headline">
+	                            House Addresses
+	                        </div>
+	
+	                        <div class="houseaddress">
+	                            <div class="street">
+	                                Paulinenstrasse 14
+	                            </div>
+	
+	                            <div class="housenumber"></div>
+	
+	                            <div class="zipcode"></div>
+	
+	                            <div class="location">
+	                                90200 Nürnberg
+	                            </div>
+	
+	                            <div class="country"></div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="proposaltitle label">
+	                        Proposal
+	                    </div>
+	
+	                    <div class="proposaltitle value">
+	                        Experte für Web-Design und UX
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	
+
+Now, let’s check the corresponding part in the **style.scss**:
+
+	/*	
+	===============================================
+	Frontpage
+	===============================================
+	*/
+	
+	body {
+	@extend %body-common;
+	}
+	
+	div {
+	
+	&.frontpage {
+		@extend %frontpage-structure-common;
+	
+	    .maintitle {
+			@extend %frontpage-title-common;
+	    }
+	
+	    .subtitle {
+			@extend %frontpage-subtitle-common;
+	    }
+	
+		.companylogo {
+			@extend %frontpage-logo-common;
+		}
+	
+		.houseaddress.list {
+			padding-bottom: 20px;
+	
+			&.houseaddress {
+				.street, 
+				.housenumber, 
+				.zipcode, 
+				.location, 
+				.country {
+					@extend %frontpage-address-entry-common;
+					color: $defensiv-color;
+				}
+			}
+		}
+		
+		.postaddress.list {
+			padding-bottom: 20px;
+	
+			&.postaddress {
+				.postbox, 
+				.zipcode, 
+				.location, 
+				.country {
+					@extend %frontpage-address-entry-common;
+					color: #666;
+				}
+			}
+		}
+		
+		.table {
+			width: 100%;
+			display: table;
+			clear: both;
+			border-collapse: separate;
+			border-spacing: 0px;
+			
+			 .row {
+				 width: 100%;
+				 display: table-row;
+				 line-height: 1.35;
+				 
+				 .column {
+				    display: table-cell;
+				    vertical-align: top;
+				    padding-bottom: 1px;
+	
+					&.left {
+						width: $embedded-column-left-width;
+						padding-right: 20px;
+						float: left;
+						white-space: nowrap;
+					}
+					&.right {
+						width: $embedded-column-right-width;
+						padding-left: 20px;
+						white-space: word-wrap;
+					}
+				}
+			}
+	
+			&.electronicaddress {
+				@extend %eaddress-table-common;
+				
+				& .row {
+					@extend %eaddress-row-common;
+	
+					&.electronicaddress {				
+						& .column {
+							&.left {
+								@extend %eaddress-label-common;
+							
+							    text-transform: uppercase;
+							    text-align: right;
+							    letter-spacing: 0.05em;
+							    font-weight: 500;
+							    font-size: .7rem;
+							    color: $base-color !important;
+							    padding-top: 0px;
+							    padding-left: 3px;
+							    padding-right: 20px;
+								padding-bottom: 0px;
+							}
+								 
+							&.right {
+								@extend %eaddress-value-common;
+								
+								color: $defensiv-color;
+								text-align: left;
+								font-weight: 300;
+								font-size: 1rem;
+								padding-bottom: 0px;
+								padding-top: 0px;
+							}
+						}	
+					}
+				} 
+			} 
+		}
+		
+	    .proposaltitle {
+			@extend %frontpage-proposal-title-common;
+	    }
+		
+		.headline {
+			@extend %frontpage-headline-common;
+		}
+	}
+	}
+	
+You can easily see how this relates. All the other content is handled pretty much the same way.
+
+This way, you may want to change the overall structure, i.e., by hiding certain parts at all, by changing alignments, by displaying key visuals, using sequences instead of tables, and more.
 
