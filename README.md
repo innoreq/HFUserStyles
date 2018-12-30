@@ -4,6 +4,10 @@ This repository provides a guidance how you as a user of the [HappyFreelancer Ap
 
 The HappyFreelancer App enables you to create high-quality proposals for any specialization you offer within a few minutes, and to maintain all of your experiences continuously in one place.
 
+The app is available currently only in the German iOS AppStore. Other regions will follow soon, so we provide the information here in English language.
+
+If you want to act as a professional style provider for HappyFreelancer, [please contact us](mailto:service@happyfreelancer.net). 
+
 
 # Prerequisites
 
