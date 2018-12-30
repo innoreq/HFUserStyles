@@ -8,6 +8,8 @@ The app is available currently only in the German iOS AppStore. Other regions wi
 
 If you want to act as a professional style provider for HappyFreelancer, [please contact us](mailto:service@happyfreelancer.net). 
 
+Please let us know when you're missing something here.
+
 
 # Prerequisites
 
